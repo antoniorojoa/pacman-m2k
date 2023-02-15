@@ -1,0 +1,12 @@
+resources:
+  - antoniora-image-registry-secret.yaml
+  - antoniora-run-clone-build-push-triggertemplate.yaml
+  - antoniora-tekton-triggers-admin-role.yaml
+  - quay-io-imagepullsecret-secret.yaml
+  - antoniora-clone-build-push-pipeline.yaml
+  - antoniora-clone-push-serviceaccount.yaml
+  - antoniora-git-repo-route.yaml
+  - antoniora-tekton-triggers-admin-serviceaccount.yaml
+  - antoniora-git-event-triggerbinding.yaml
+  - antoniora-git-repo-eventlistener.yaml
+  - antoniora-tekton-triggers-admin-rolebinding.yaml

@@ -1,0 +1,17 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  creationTimestamp: null
+  name: antoniora-git-repo
+spec:
+  namespaceSelector: {}
+  resources: {}
+  serviceAccountName: antoniora-tekton-triggers-admin
+  triggers:
+    - bindings:
+        - ref: antoniora-git-event
+      template:
+        ref: antoniora-run-clone-build-push
+status:
+  configuration:
+    generatedName: ""

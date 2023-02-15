@@ -1,6 +1,0 @@
-resources:
-  - pacman-service.yaml
-  - quay-io-imagepullsecret-secret.yaml
-  - pacman-deployment.yaml
-  - pacman-latest-imagestream.yaml
-  - pacman-route.yaml

@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    move2kube.konveyor.io/service: antoniora-git-repo
+  name: antoniora-git-repo
+spec:
+  host: pacman-m2k.apps-crc.testing
+  path: /el-antoniora-git-repo
+  port:
+    targetPort: port-8080
+  to:
+    kind: Service
+    name: antoniora-git-repo
+    weight: 1
+status:
+  ingress:
+    - {}

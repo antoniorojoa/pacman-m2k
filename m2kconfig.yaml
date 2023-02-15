@@ -11,48 +11,48 @@ move2kube:
     default:
       clustertype: Openshift
       ingress:
-        host: apps-crc.testing
+        host: pacman-m2k.apps-crc.testing
     imageregistry:
-      namespace: pacman
+      namespace: antoniora
       quay.io:
         logintype: username and password
         username: antoniora
       url: quay.io
   transformers:
     types:
-      - Nodejs-Dockerfile
-      - Kubernetes
-      - ContainerImagesPushScriptGenerator
-      - DockerfileDetector
-      - DockerfileParser
-      - ReadMeGenerator
-      - Jar
-      - DotNetCore-Dockerfile
-      - Golang-Dockerfile
-      - Jboss
-      - ArgoCD
       - Rust-Dockerfile
-      - ZuulAnalyser
-      - DockerfileImageBuildScript
+      - Knative
+      - DockerfileDetector
+      - Ruby-Dockerfile
+      - Kubernetes
+      - WinWebApp-Dockerfile
+      - Tomcat
+      - PHP-Dockerfile
       - Gradle
+      - Jboss
+      - ClusterSelector
+      - CloudFoundry
+      - Nodejs-Dockerfile
       - Liberty
+      - Maven
+      - DockerfileImageBuildScript
+      - DotNetCore-Dockerfile
+      - ComposeGenerator
+      - Buildconfig
+      - ReadMeGenerator
+      - Python-Dockerfile
+      - Parameterizer
+      - Golang-Dockerfile
+      - ArgoCD
+      - ComposeAnalyser
       - WarAnalyser
       - EarAnalyser
-      - Parameterizer
-      - Tekton
-      - ClusterSelector
-      - Tomcat
       - EarRouter
+      - Tekton
+      - ZuulAnalyser
       - KubernetesVersionChanger
-      - CloudFoundry
-      - WinWebApp-Dockerfile
+      - Jar
       - WarRouter
-      - ComposeGenerator
-      - Knative
-      - PHP-Dockerfile
-      - Maven
-      - ComposeAnalyser
-      - Buildconfig
-      - Ruby-Dockerfile
-      - Python-Dockerfile
+      - ContainerImagesPushScriptGenerator
+      - DockerfileParser
   transformerselector: ""

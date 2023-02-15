@@ -1,0 +1,4 @@
+resources:
+  - antoniora-clone-build-push-pacman-buildconfig.yaml
+  - antoniora-git-repo-generic-secret.yaml
+  - antoniora-web-hook-pacman-secret.yaml

@@ -51,77 +51,77 @@ spec:
         - WinWebApp-Dockerfile
         - ZuulAnalyser
       default:
-        - Nodejs-Dockerfile
-        - Kubernetes
-        - ContainerImagesPushScriptGenerator
-        - DockerfileDetector
-        - DockerfileParser
-        - ReadMeGenerator
-        - Jar
-        - DotNetCore-Dockerfile
-        - Golang-Dockerfile
-        - Jboss
-        - ArgoCD
         - Rust-Dockerfile
-        - ZuulAnalyser
-        - DockerfileImageBuildScript
+        - Knative
+        - DockerfileDetector
+        - Ruby-Dockerfile
+        - Kubernetes
+        - WinWebApp-Dockerfile
+        - Tomcat
+        - PHP-Dockerfile
         - Gradle
+        - Jboss
+        - ClusterSelector
+        - CloudFoundry
+        - Nodejs-Dockerfile
         - Liberty
+        - Maven
+        - DockerfileImageBuildScript
+        - DotNetCore-Dockerfile
+        - ComposeGenerator
+        - Buildconfig
+        - ReadMeGenerator
+        - Python-Dockerfile
+        - Parameterizer
+        - Golang-Dockerfile
+        - ArgoCD
+        - ComposeAnalyser
         - WarAnalyser
         - EarAnalyser
-        - Parameterizer
-        - Tekton
-        - ClusterSelector
-        - Tomcat
         - EarRouter
+        - Tekton
+        - ZuulAnalyser
         - KubernetesVersionChanger
-        - CloudFoundry
-        - WinWebApp-Dockerfile
+        - Jar
         - WarRouter
-        - ComposeGenerator
-        - Knative
-        - PHP-Dockerfile
-        - Maven
-        - ComposeAnalyser
-        - Buildconfig
-        - Ruby-Dockerfile
-        - Python-Dockerfile
+        - ContainerImagesPushScriptGenerator
+        - DockerfileParser
       answer:
-        - Nodejs-Dockerfile
-        - Kubernetes
-        - ContainerImagesPushScriptGenerator
-        - DockerfileDetector
-        - DockerfileParser
-        - ReadMeGenerator
-        - Jar
-        - DotNetCore-Dockerfile
-        - Golang-Dockerfile
-        - Jboss
-        - ArgoCD
         - Rust-Dockerfile
-        - ZuulAnalyser
-        - DockerfileImageBuildScript
+        - Knative
+        - DockerfileDetector
+        - Ruby-Dockerfile
+        - Kubernetes
+        - WinWebApp-Dockerfile
+        - Tomcat
+        - PHP-Dockerfile
         - Gradle
+        - Jboss
+        - ClusterSelector
+        - CloudFoundry
+        - Nodejs-Dockerfile
         - Liberty
+        - Maven
+        - DockerfileImageBuildScript
+        - DotNetCore-Dockerfile
+        - ComposeGenerator
+        - Buildconfig
+        - ReadMeGenerator
+        - Python-Dockerfile
+        - Parameterizer
+        - Golang-Dockerfile
+        - ArgoCD
+        - ComposeAnalyser
         - WarAnalyser
         - EarAnalyser
-        - Parameterizer
-        - Tekton
-        - ClusterSelector
-        - Tomcat
         - EarRouter
+        - Tekton
+        - ZuulAnalyser
         - KubernetesVersionChanger
-        - CloudFoundry
-        - WinWebApp-Dockerfile
+        - Jar
         - WarRouter
-        - ComposeGenerator
-        - Knative
-        - PHP-Dockerfile
-        - Maven
-        - ComposeAnalyser
-        - Buildconfig
-        - Ruby-Dockerfile
-        - Python-Dockerfile
+        - ContainerImagesPushScriptGenerator
+        - DockerfileParser
     - id: move2kube.services.[].enable
       type: MultiSelect
       description: 'Select all services that are needed:'
@@ -157,22 +157,22 @@ spec:
       type: Input
       description: 'Enter the namespace where the new images should be pushed : '
       hints:
-        - 'Ex : pacman'
-      default: pacman
-      answer: pacman
+        - 'Ex : antoniora'
+      default: antoniora
+      answer: antoniora
     - id: move2kube.target."default".clustertype
       type: Select
       description: 'Choose the cluster type:'
       hints:
         - Choose the cluster type you would like to target
       options:
+        - AWS-EKS
+        - Azure-AKS
         - GCP-GKE
         - IBM-IKS
         - IBM-Openshift
         - Kubernetes
         - Openshift
-        - AWS-EKS
-        - Azure-AKS
       default: Kubernetes
       answer: Openshift
     - id: move2kube.services."pacman"."8080".servicetype
@@ -223,5 +223,5 @@ spec:
       description: Provide the ingress host domain
       hints:
         - Ingress host domain is part of service URL
-      default: pacman.com
-      answer: apps-crc.testing
+      default: antoniora.com
+      answer: pacman-m2k.apps-crc.testing

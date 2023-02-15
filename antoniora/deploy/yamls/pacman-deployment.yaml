@@ -25,7 +25,7 @@ spec:
       name: pacman
     spec:
       containers:
-        - image: quay.io/antoniora/pacman:latest@sha256:cb233d8ac3b2ea0453c05373bea5cac91b9942802c57abcbadd55948a32568e8
+        - image: quay.io/antoniora/pacman:latest@sha256:b809e80dbda1d524440ffd50c8c83d5472558b0b786cd027908f20924e51a7ad
           imagePullPolicy: Always
           name: pacman
           ports:

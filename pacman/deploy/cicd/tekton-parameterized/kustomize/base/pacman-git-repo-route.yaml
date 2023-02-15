@@ -1,0 +1,23 @@
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+    creationTimestamp: null
+    labels:
+        move2kube.konveyor.io/service: pacman-git-repo
+    name: pacman-git-repo
+spec:
+    host: apps-crc.testing
+    path: /el-pacman-git-repo
+    port:
+        targetPort: port-8080
+    to:
+        kind: Service
+        name: pacman-git-repo
+        weight: 1
+status:
+    ingress:
+        - {}
+
+...

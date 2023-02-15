@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+  pacman:
+    container_name: pacman
+    image: quay.io/pacman/pacman:latest
+    ports:
+      - target: 8080
+        published: 8080

@@ -1,0 +1,4 @@
+resources:
+  - pacman-clone-build-push-pacman-buildconfig.yaml
+  - pacman-git-repo-generic-secret.yaml
+  - pacman-web-hook-pacman-secret.yaml

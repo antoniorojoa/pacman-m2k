@@ -1,0 +1,58 @@
+move2kube:
+  minreplicas: "2"
+  services:
+    pacman:
+      "8080":
+        servicetype: Ingress
+        urlpath: /
+      enable: true
+      port: "8080"
+  target:
+    default:
+      clustertype: Openshift
+      ingress:
+        host: apps-crc.testing
+    imageregistry:
+      namespace: pacman
+      quay.io:
+        logintype: username and password
+        username: antoniora
+      url: quay.io
+  transformers:
+    types:
+      - Nodejs-Dockerfile
+      - Kubernetes
+      - ContainerImagesPushScriptGenerator
+      - DockerfileDetector
+      - DockerfileParser
+      - ReadMeGenerator
+      - Jar
+      - DotNetCore-Dockerfile
+      - Golang-Dockerfile
+      - Jboss
+      - ArgoCD
+      - Rust-Dockerfile
+      - ZuulAnalyser
+      - DockerfileImageBuildScript
+      - Gradle
+      - Liberty
+      - WarAnalyser
+      - EarAnalyser
+      - Parameterizer
+      - Tekton
+      - ClusterSelector
+      - Tomcat
+      - EarRouter
+      - KubernetesVersionChanger
+      - CloudFoundry
+      - WinWebApp-Dockerfile
+      - WarRouter
+      - ComposeGenerator
+      - Knative
+      - PHP-Dockerfile
+      - Maven
+      - ComposeAnalyser
+      - Buildconfig
+      - Ruby-Dockerfile
+      - Python-Dockerfile
+  transformerselector: ""
